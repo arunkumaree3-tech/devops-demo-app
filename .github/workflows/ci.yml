@@ -1,19 +1,17 @@
-name: Devops test
+name: DevOps Demo Workflow
 
-On:
- push:
-  branch:
-    - main
+on:
+  push:
+    branches:
+      - main
 
-Jobs:
- build:
-  runs-on: Ubuntu-latest
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-  Steps:
-   - name: Checkout code
-     uses: actions/checkout@v4
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
 
-   - name: print message
-     run: echo "devops demo app"
-
-
+      - name: Print Message
+        run: echo "DevOps Demo App"
