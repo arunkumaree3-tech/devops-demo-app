@@ -1,0 +1,19 @@
+name: Devops test
+
+On:
+ push:
+  branch:
+    - main
+
+Jobs:
+ build:
+  runs-on: Ubuntu-latest
+
+  Steps:
+   - name: Checkout code
+     uses: actions/checkout@v4
+
+   - name: print message
+     run: echo "devops demo app"
+
+
